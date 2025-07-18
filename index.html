@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual do PROATI - DE Adamantina</title>
+    <meta name="description" content="Manual de Sobrevivência do PROATI - Diretoria de Ensino de Adamantina">
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div>
+                    <div class="logo">Manual do PROATI</div>
+                    <div class="subtitle">NIT (Núcleo de Informações Educacionais e Tecnologia) - DE Adamantina</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Layout Principal -->
+    <div class="container">
+        <div class="main-layout">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <h3>📋 Menu Rápido</h3>
+                <ul class="sidebar-menu">
+                    <li><a href="#home" class="active" data-page="home">🏠 Início</a></li>
+                    <li><a href="#comunicados-nit" data-page="comunicados-nit">📢 Comunicados NIT</a></li>
+                    <li><a href="#levantamentos" data-page="levantamentos">📊 Levantamentos</a></li>
+                    <li><a href="#comunicados-seduc" data-page="comunicados-seduc">📄 Comunicados SEDUC</a></li>
+                    <li><a href="#equipe" data-page="equipe">👥 Equipe</a></li>
+                    <li><a href="#conectividade" data-page="conectividade">🌐 Conectividade</a></li>
+					<li><a href="#equipamentos" data-page="equipamentos">💻 Todos os Equipamentos</a></li>
+                    <li><a href="#garantia" data-page="garantia">🛡️ Garantia</a></li>
+                    <li><a href="#identificacao" data-page="identificacao">🏷️ Identificação</a></li>
+                    <li><a href="#impressoras" data-page="impressoras">🖨️ Impressoras</a></li>
+                    <li><a href="#sed-email" data-page="sed-email">📧 E-mail institucional</a></li>
+                    <li><a href="#suporte-remoto" data-page="suporte-remoto">🔧 Suporte Remoto</a></li>
+                </ul>
+            </aside>
+
+            <!-- Conteúdo Principal -->
+            <main class="main-content fade-in">
+                <!-- Conteúdo será carregado dinamicamente aqui -->
+                <div class="loading-container" style="text-align: center; padding: 50px;">
+                    <p>Carregando...</p>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>📍 Diretoria de Ensino</h4>
+                    <p>Região de Adamantina</p>
+                    <p>Estado de São Paulo</p>
+                </div>
+                <div class="footer-section">
+                    <h4>📞 Contato NIT</h4>
+                    <p>E-mail: deadanit@educacao.sp.gov.br</p>
+                    <p>WhatsApp: (18) 3502-2303</p>
+                </div>
+                <div class="footer-section">
+                    <h4>🕒 Horário de Atendimento</h4>
+                    <p>Segunda a Sexta</p>
+                    <p>8:00-13:00 e 13:30-17:30</p>
+                </div>
+            </div>
+            <p style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #374151;">
+                © 2025 Manual do PROATI - NIT/DE Adamantina
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/layout-template.js"></script>
+    <script src="js/page-loader.js"></script>
+    <script>
+        // Inicialização do sistema
+        document.addEventListener('DOMContentLoaded', function() {
+			// CORREÇÃO: Criar instância do PageLoader ANTES de registrar páginas
+            window.pageLoader = new PageLoader();
+			
+            // Registra todas as páginas HTML
+            registerAllPages();
+            
+            // Inicializa o template
+            window.layoutTemplate.init();
+            
+            // Inicializa funcionalidades do menu mobile
+            initMobileMenu();
+            
+            // Carrega página inicial
+            const initialPage = window.location.hash.slice(1) || 'home';
+            window.pageLoader.loadPage(initialPage);
+        });
+
+        // Registra todas as páginas HTML no sistema
+        function registerAllPages() {
+            // Páginas com arquivos HTML específicos
+            window.pageLoader.registerPage('home', 'pages/html/home.html');
+            window.pageLoader.registerPage('comunicados-nit', 'pages/html/comunicados-nit.html');
+            window.pageLoader.registerPage('levantamentos', 'pages/html/levantamentos.html');
+			window.pageLoader.registerPage('comunicados-seduc', 'pages/html/comunicados-seduc.html');
+            window.pageLoader.registerPage('conectividade', 'pages/html/conectividade.html');
+            window.pageLoader.registerPage('equipe', 'pages/html/equipe.html');
+            window.pageLoader.registerPage('garantia', 'pages/html/garantia.html');
+			window.pageLoader.registerPage('identificacao', 'pages/html/identificacao.html');
+			window.pageLoader.registerPage('impressoras', 'pages/html/impressoras.html');
+			window.pageLoader.registerPage('sed-email', 'pages/html/sed-email.html');
+			window.pageLoader.registerPage('suporte-remoto', 'pages/html/suporte-remoto.html');
+			window.pageLoader.registerPage('equipamentos', 'pages/html/equipamentos.html');
+			window.pageLoader.registerPage('chromebook-samsung', 'pages/html/chromebook-samsung.html');
+			window.pageLoader.registerPage('computadores-sala-informatica', 'pages/html/computadores-sala-informatica.html');
+			window.pageLoader.registerPage('desktop-lenovo', 'pages/html/desktop-lenovo.html');
+			window.pageLoader.registerPage('fones-ouvido', 'pages/html/fones-de-ouvido.html');
+			window.pageLoader.registerPage('notebook-multilaser', 'pages/html/notebook-multilaser-ultra.html');
+			window.pageLoader.registerPage('notebook-positivo', 'pages/html/notebook-positivo.html');
+			window.pageLoader.registerPage('plataforma-recarga', 'pages/html/plataforma-recarga.html');
+			window.pageLoader.registerPage('smartphone-multilaser', 'pages/html/smartphones-multilaser.html');
+			window.pageLoader.registerPage('smartphone-redmi', 'pages/html/smartphones-redmi-note-11.html');
+			window.pageLoader.registerPage('tablet-positivo', 'pages/html/tablet-positivo.html');
+			window.pageLoader.registerPage('televisor-lg', 'pages/html/televisor-lg.html');
+			
+            // Páginas que ainda não foram criadas - usando página padrão
+            const defaultPages = [
+                
+            ];
+
+            // Para páginas não criadas, cria conteúdo padrão
+            defaultPages.forEach(pageId => {
+                createDefaultPage(pageId);
+            });
+        }
+
+        // Cria página padrão para páginas ainda não implementadas
+        function createDefaultPage(pageId) {
+            const menuItem = window.layoutTemplate.menuItems.find(item => item.id === pageId);
+            const title = menuItem ? menuItem.title : pageId;
+            
+            const defaultContent = `
+                <h1>${title}</h1>
+                
+                <div class="alert alert-info">
+                    <strong>🚧 Em Construção:</strong> Esta página está sendo desenvolvida. Em breve terá conteúdo completo.
+                </div>
+
+                <div class="search-container">
+                    <input type="text" id="search-input" class="search-input" 
+                           placeholder="🔍 Buscar informações...">
+                </div>
+
+                <h2>📞 Contato</h2>
+                <p>Para informações sobre este tópico, entre em contato com o NIT:</p>
+                
+                <div style="background: #f0f9ff; border: 2px solid #0ea5e9; border-radius: 12px; padding: 25px; margin: 20px 0;">
+                    <h3 style="color: #0c4a6e; margin-bottom: 15px;">📞 Contato NIT</h3>
+                    <p><strong>📧 E-mail:</strong> deadanit@educacao.sp.gov.br</p>
+                    <p><strong>📱 WhatsApp:</strong> (18) 3502-2303</p>
+                    <p><strong>🕒 Horário:</strong> Segunda a Sexta: 8:00-13:00 e 13:30-17:30</p>
+                </div>
+
+                <div class="alert alert-success">
+                    <strong>💡 Sugestão:</strong> Tem conteúdo para esta seção? Entre em contato com o NIT para contribuir com o manual!
+                </div>
+            `;
+
+            // Cria um blob URL para o conteúdo padrão
+            const blob = new Blob([defaultContent], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            
+            window.pageLoader.registerPage(pageId, url);
+        }
+
+        // Funcionalidade do menu mobile
+        function initMobileMenu() {
+            // Criar botão do menu hambúrguer se não existir
+            if (!document.querySelector('.mobile-menu-toggle')) {
+                const menuToggle = document.createElement('button');
+                menuToggle.className = 'mobile-menu-toggle';
+                menuToggle.innerHTML = '☰';
+                menuToggle.setAttribute('aria-label', 'Abrir menu');
+                document.body.appendChild(menuToggle);
+            }
+            
+            // Criar overlay se não existir
+            if (!document.querySelector('.sidebar-overlay')) {
+                const overlay = document.createElement('div');
+                overlay.className = 'sidebar-overlay';
+                document.body.appendChild(overlay);
+            }
+            
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            const sidebar = document.querySelector('.sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            
+            if (menuToggle && sidebar && overlay) {
+                // Abrir menu
+                menuToggle.addEventListener('click', function() {
+                    sidebar.classList.add('open');
+                    overlay.classList.add('show');
+                    menuToggle.innerHTML = '✕';
+                    menuToggle.setAttribute('aria-label', 'Fechar menu');
+                });
+                
+                // Fechar menu ao clicar no overlay
+                overlay.addEventListener('click', function() {
+                    sidebar.classList.remove('open');
+                    overlay.classList.remove('show');
+                    menuToggle.innerHTML = '☰';
+                    menuToggle.setAttribute('aria-label', 'Abrir menu');
+                });
+                
+                // Fechar menu ao clicar em um link da sidebar
+                const sidebarLinks = sidebar.querySelectorAll('a');
+                sidebarLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        if (window.innerWidth <= 1024) {
+                            sidebar.classList.remove('open');
+                            overlay.classList.remove('show');
+                            menuToggle.innerHTML = '☰';
+                            menuToggle.setAttribute('aria-label', 'Abrir menu');
+                        }
+                    });
+                });
+                
+                // Fechar menu ao redimensionar para desktop
+                window.addEventListener('resize', function() {
+                    if (window.innerWidth > 1024) {
+                        sidebar.classList.remove('open');
+                        overlay.classList.remove('show');
+                        menuToggle.innerHTML = '☰';
+                        menuToggle.setAttribute('aria-label', 'Abrir menu');
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>
+
