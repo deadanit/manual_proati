@@ -19,7 +19,7 @@ class LayoutTemplate {
             { id: 'legislacao', title: '⚖️ Legislação', icon: '⚖️' },
             { id: 'sed-email', title: '📧 SED e E-mail', icon: '📧' },
             { id: 'suporte-remoto', title: '🔧 Suporte Remoto', icon: '🔧' },
-            { id: 'equipamentos', title: '💻 Todos os Equipamentos', icon: '💻' }
+            { id: 'equipamentos', title: '💻 Equipamentos', icon: '💻' }
         ];
     }
 
