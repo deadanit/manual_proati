@@ -369,10 +369,81 @@ class PageLoader {
                 break;
         }
     }
+	
+	// Função para carregar e exibir datas de atualização
+	async loadUpdateDates() {
+		try {
+			const response = await fetch('https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLiqN3CMukIdMAdaFnJERStgOvPMJSx-BT0LeB_WSfNZAjWVlzMksXqFNA73IM8Y_e1f9HjerQ5ozbLb4k9hUiWEwyH09ztghtnYUoyQWSYmSlw4pRCDvMzIqY_aM1J9BszCLZxNCFRq2yutC5e75hCsTxuOBEmoj7o3jpa0W6Be7nzN-RtvzMRheh92pfnRLrpe6EnX-_hABKds94P1p7oY4_L1oLkrlas8EgFgmIazBdax1lb5mm-DLA00Lynl6GJJoiWF7QFd4aJBCvWiHQbOMUj6N1SV3Xc4PuRX&lib=MGqs4kGrWEmw2oa0v22DgoDThdS_WAule');
+			
+			if (!response.ok) {
+				throw new Error('Erro ao carregar dados');
+			}
+			
+			const data = await response.json();
+			
+			// Processa cada escola
+			const updateElements = document.querySelectorAll('.update-date');
+			
+			updateElements.forEach(element => {
+				const escolaNome = element.getAttribute('data-escola');
+				const dateText = element.querySelector('.date-text');
+				
+				// Procura a escola nos dados retornados
+				const escolaData = data.find(item => item[1] === escolaNome);
+				
+				if (escolaData && escolaData[0]) {
+					const updateDate = new Date(escolaData[0]);
+					const updateNoTime = new Date(updateDate.getFullYear(), updateDate.getMonth(), updateDate.getDate());
+					
+					const today = new Date();
+					const todayNoTime = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+					
+					const diffTime = Math.abs(todayNoTime - updateNoTime);
+					const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+					
+					// Formata a data para exibição
+					const formattedDate = updateNoTime.toLocaleDateString('pt-BR');
+					
+					// Define a cor baseada nos dias
+					let color = '';
+					let status = '';
+					
+					if (diffDays <= 15) {
+						color = '#22c55e'; // Verde
+						status = '✅';
+					} else if (diffDays <= 30) {
+						color = '#f59e0b'; // Amarelo
+						status = '⚠️';
+					} else {
+						color = '#ef4444'; // Vermelho
+						status = '🔴';
+					}
+					
+					dateText.innerHTML = `${status} ${formattedDate} (${diffDays} dias)`;
+					dateText.style.color = color;
+					
+				} else {
+					dateText.innerHTML = '❓ Sem dados';
+					dateText.style.color = '#6b7280';
+				}
+			});
+			
+		} catch (error) {
+			console.error('Erro ao carregar datas de atualização:', error);
+			
+			// Em caso de erro, mostra mensagem padrão
+			const dateTexts = document.querySelectorAll('.date-text');
+			dateTexts.forEach(dateText => {
+				dateText.innerHTML = '❌ Erro ao carregar';
+				dateText.style.color = '#ef4444';
+			});
+		}
+	}
 
     // Recursos específicos otimizados
     initLevantamentosFeatures() {
         console.log('Inicializando recursos da página de levantamentos');
+		this.loadUpdateDates();
     }
 
     initConectividadeFeatures() {
