@@ -119,6 +119,7 @@ class LayoutTemplate {
                 ${this.generateFooter()}
                 <script src="js/layout-template.js"></script>
                 <script src="js/page-loader.js"></script>
+				<script async data-id="101488917" src="//static.getclicky.com/js"></script>
             </body>
             </html>
         `;
@@ -317,23 +318,3 @@ class LayoutTemplate {
         this.isInitialized = false;
     }
 }
-
-// Instância global do template
-window.layoutTemplate = new LayoutTemplate();
-
-// Inicializa quando DOM estiver pronto
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
-        window.layoutTemplate.init();
-    });
-} else {
-    window.layoutTemplate.init();
-}
-
-// Cleanup ao sair da página
-window.addEventListener('beforeunload', () => {
-    if (window.layoutTemplate) {
-        window.layoutTemplate.cleanup();
-    }
-});
-

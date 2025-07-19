@@ -85,13 +85,15 @@
     <script>
         // Inicialização do sistema
         document.addEventListener('DOMContentLoaded', function() {
-			// CORREÇÃO: Criar instância do PageLoader ANTES de registrar páginas
+			
+			// Inicializa instâncias
             window.pageLoader = new PageLoader();
+			window.layoutTemplate = new LayoutTemplate();
 			
             // Registra todas as páginas HTML
             registerAllPages();
-            
-            // Inicializa o template
+			
+			// Inicializa o template
             window.layoutTemplate.init();
             
             // Inicializa funcionalidades do menu mobile
