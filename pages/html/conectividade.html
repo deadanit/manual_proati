@@ -6,22 +6,24 @@
 
 <h2>🔗 Links de Internet</h2>
 
-<div style="background: #f0f9ff; border: 2px solid #0ea5e9; border-radius: 12px; padding: 25px; margin: 20px 0;">
-	<h3 style="color: #0c4a6e; margin-bottom: 15px;">📡 VIVO</h3>
+<div class="info-box info-box-blue">
+	<h3>📡 VIVO</h3>
 	<p>Toda escola estadual possui um link de internet dedicado de <strong>100 Mbps</strong> fornecido pela operadora Vivo.</p>
 </div>
 
-<div style="background: #f0fdf4; border: 2px solid #22c55e; border-radius: 12px; padding: 25px; margin: 20px 0;">
-	<h3 style="color: #166534; margin-bottom: 15px;">🌐 INTERNET ADICIONAL</h3>
+<div class="info-box info-box-green">
+	<h3>🌐 INTERNET ADICIONAL</h3>
 	<p>As escolas estaduais anualmente recebem verba federal do <strong>PIEC (Programa de Inovação Educação Conectada)</strong>, que deve ser destinada prioritariamente para a contratação de internet.</p>
-	<div class="alert alert-info" style="margin-top: 15px;">
+	<div class="alert alert-info">
 		<strong>💡 Como funciona:</strong> Quando a internet adicional está ativa, todo o tráfego é direcionado para ela. Em caso de queda, a internet da Vivo entra em operação automaticamente.
 	</div>
 </div>
 
-<div style="background: #f0f9ff; border: 2px solid #0ea5e9; border-radius: 12px; padding: 25px; margin: 20px 0;">
-	<h3 style="color: #0c4a6e; margin-bottom: 15px;">Exemplo de Instalação</h3>
-	<img src="img/exemplo_instalacao_rack.jpg" width="50%">
+<div class="info-box info-box-blue">
+	<h3>Exemplo de Instalação</h3>
+	<div class="image-container">
+		<img src="img/exemplo_instalacao_rack.jpg" alt="Exemplo de instalação do rack" class="responsive-image">
+	</div>
 </div>
 
 <div id="internet_caiu">
@@ -32,8 +34,10 @@
 	<p>Primeiramente verifique se a escola inteira está sem internet ou se o problema ocorre apenas em determinado ambiente.</p>
 
 	<div class="alert alert-warning">
-		<p><strong>⚠️ Importante:</strong> Uma causa muito comum de problemas é o desligamento indevido de disjuntores, que são responsáveis pelo fornecimento de energia para os racks e Access Points.</a>
-		<p><img src="img/disjuntores.png" width="50%"></p>
+		<p><strong>⚠️ Importante:</strong> Uma causa muito comum de problemas é o desligamento indevido de disjuntores, que são responsáveis pelo fornecimento de energia para os racks e Access Points.</p>
+		<div class="image-container">
+			<img src="img/disjuntores.png" alt="Disjuntores do rack" class="responsive-image">
+		</div>
 	</div>
 
 	<p><strong>Em caso de falta de conexão parcial:</strong></p>
@@ -54,11 +58,15 @@
 	<ol>
 		<li>
 			<strong>Verifique se o conector está bem encaixado</strong> no computador e no ponto de rede
-			<img src="img/ponto_rede.jpg" width="50%">
+			<div class="image-container">
+				<img src="img/ponto_rede.jpg" alt="Ponto de rede" class="responsive-image">
+			</div>
 		</li>
 		<li>
 			<strong>Observe se os LEDs indicadores de conexão estão acesos</strong>
-			<img src="img/led_placa_rede.png" width="50%">
+			<div class="image-container">
+				<img src="img/led_placa_rede.png" alt="LED da placa de rede" class="responsive-image">
+			</div>
 		</li>
 		<li><strong>Troque o cabo de rede</strong></li>
 		<li><strong>Teste outro computador</strong> no mesmo ponto de rede</li>
@@ -107,42 +115,42 @@
 </div>
 
 <div class="table-responsive">
-<table class="table-stack">
-	<thead>
-		<tr>
-			<th>Rede Wi-Fi</th>
-			<th>Equipamentos</th>
-			<th>Observações</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><strong>SEDUC-MAQ</strong></td>
-			<td>Notebooks Positivo, Chromebook Samsung, Notebooks com Windows da Seduc</td>
-			<td>Conexão automática ao ligar o equipamento</td>
-		</tr>
-		<tr>
-			<td><strong>SEDUC-ADM</strong></td>
-			<td>Dispositivos pessoais de colaboradores administrativos</td>
-			<td>Diretor, COE, GOE, AOE</td>
-		</tr>
-		<tr>
-			<td><strong>SEDUC-ALUNOS e PROFESSORES</strong></td>
-			<td>Dispositivos pessoais de alunos e professores</td>
-			<td>Inclusive coordenadores</td>
-		</tr>
-		<tr>
-			<td><strong>TABLETS-ESCOLAS</strong></td>
-			<td>Tablets e smartphones da escola</td>
-			<td>Rede atual para dispositivos móveis</td>
-		</tr>
-		<tr>
-			<td><strong>SEDUC_TV</strong></td>
-			<td>Funciona apenas nos Televisores LG recebidos da Seduc</td>
-			<td>A rede é oculta e não possui senha</td>
-		</tr>
-	</tbody>
-</table>
+	<table class="table-stack">
+		<thead>
+			<tr>
+				<th>Rede Wi-Fi</th>
+				<th>Equipamentos</th>
+				<th>Observações</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td data-label="Rede Wi-Fi"><strong>SEDUC-MAQ</strong></td>
+				<td data-label="Equipamentos">Notebooks Positivo, Chromebook Samsung, Notebooks com Windows da Seduc</td>
+				<td data-label="Observações">Conexão automática ao ligar o equipamento</td>
+			</tr>
+			<tr>
+				<td data-label="Rede Wi-Fi"><strong>SEDUC-ADM</strong></td>
+				<td data-label="Equipamentos">Dispositivos pessoais de colaboradores administrativos</td>
+				<td data-label="Observações">Diretor, COE, GOE, AOE</td>
+			</tr>
+			<tr>
+				<td data-label="Rede Wi-Fi"><strong>SEDUC-ALUNOS e PROFESSORES</strong></td>
+				<td data-label="Equipamentos">Dispositivos pessoais de alunos e professores</td>
+				<td data-label="Observações">Inclusive coordenadores</td>
+			</tr>
+			<tr>
+				<td data-label="Rede Wi-Fi"><strong>TABLETS-ESCOLAS</strong></td>
+				<td data-label="Equipamentos">Tablets e smartphones da escola</td>
+				<td data-label="Observações">Rede atual para dispositivos móveis</td>
+			</tr>
+			<tr>
+				<td data-label="Rede Wi-Fi"><strong>SEDUC_TV</strong></td>
+				<td data-label="Equipamentos">Funciona apenas nos Televisores LG recebidos da Seduc</td>
+				<td data-label="Observações">A rede é oculta e não possui senha</td>
+			</tr>
+		</tbody>
+	</table>
 </div>
 
 <div class="alert alert-warning">
@@ -150,58 +158,77 @@
 </div>
 
 <h2>📑 Manuais de Acesso</h2>
-<h3>📄 <a href="docs/manual_conectividade.pdf" target="_blank">Manual de Conectividade</a></h3>
-<h3>📄 <a href="docs/manual-acesso-a-rede-seduc_tv.pdf" target="_blank">Acesso à rede SEDUC-TV</a></h3>
+<div class="link-container">
+	<a href="docs/manual_conectividade.pdf" target="_blank" class="responsive-link">
+		<span class="link-icon">📄</span>
+		<span class="link-text">Manual de Conectividade</span>
+		<span class="link-url">Arquivo PDF - Manual de Conectividade</span>
+	</a>
+</div>
+
+<div class="link-container">
+	<a href="docs/manual-acesso-a-rede-seduc_tv.pdf" target="_blank" class="responsive-link">
+		<span class="link-icon">📄</span>
+		<span class="link-text">Acesso à rede SEDUC-TV</span>
+		<span class="link-url">Arquivo PDF - Manual de acesso à rede SEDUC-TV</span>
+	</a>
+</div>
 
 <h2 id="wifi-problemas">📡 Access Point (AP)</h2>
 
-<div style="background: #f0f9ff; border: 2px solid #0ea5e9; border-radius: 12px; padding: 25px; margin: 20px 0;">
-	<h3 style="color: #0c4a6e; margin-bottom: 15px;">📋 ORIENTAÇÕES GERAIS</h3>
+<div class="info-box info-box-blue">
+	<h3>📋 ORIENTAÇÕES GERAIS</h3>
 	<ul>
 		<li>Todas as escolas estaduais possuem Access Points (APs)</li>
 		<li>São responsáveis por fornecer o sinal das redes SEDUC</li>
 		<li>Geralmente são instalados a cada duas salas de aula</li>
 		<li>Todo AP deve ser mantido sempre ligado nas redes lógica e elétrica</li>
 	</ul>
-	<img src="img/access_point.jpg" width="100%">
+	<div class="image-container">
+		<img src="img/access_point.jpg" alt="Access Point" class="responsive-image">
+	</div>
 </div>
 
 <h3>🚦 SIGNIFICADO DAS CORES DO LED DO AP</h3>
 
-<table>
-	<thead>
-		<tr>
-			<th>Cor do LED</th>
-			<th>Significado</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td style="color: #dc2626;"><strong>🔴 Vermelho ou Laranja</strong></td>
-			<td>AP ligado, mas sem conexão com a Internet ou com falha</td>
-		</tr>
-		<tr>
-			<td style="color: #8b5cf6;"><strong>🌈 Piscando colorido</strong></td>
-			<td>AP inicializando e tentando conectar à Internet</td>
-		</tr>
-		<tr>
-			<td style="color: #3b82f6;"><strong>🔵 Piscando azul</strong></td>
-			<td>Atualização do AP em andamento</td>
-		</tr>
-		<tr>
-			<td style="color: #22c55e;"><strong>🟢 Verde</strong></td>
-			<td>Funcionamento OK (conectado à Internet, sem usuários)</td>
-		</tr>
-		<tr>
-			<td style="color: #3b82f6;"><strong>🔵 Azul</strong></td>
-			<td>Funcionamento OK (conectado à Internet, com usuários)</td>
-		</tr>
-	</tbody>
-</table>
+<div class="table-responsive">
+	<table class="table-stack">
+		<thead>
+			<tr>
+				<th>Cor do LED</th>
+				<th>Significado</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td data-label="Cor do LED"><strong style="color: #dc2626;">🔴 Vermelho ou Laranja</strong></td>
+				<td data-label="Significado">AP ligado, mas sem conexão com a Internet ou com falha</td>
+			</tr>
+			<tr>
+				<td data-label="Cor do LED"><strong style="color: #8b5cf6;">🌈 Piscando colorido</strong></td>
+				<td data-label="Significado">AP inicializando e tentando conectar à Internet</td>
+			</tr>
+			<tr>
+				<td data-label="Cor do LED"><strong style="color: #3b82f6;">🔵 Piscando azul</strong></td>
+				<td data-label="Significado">Atualização do AP em andamento</td>
+			</tr>
+			<tr>
+				<td data-label="Cor do LED"><strong style="color: #22c55e;">🟢 Verde</strong></td>
+				<td data-label="Significado">Funcionamento OK (conectado à Internet, sem usuários)</td>
+			</tr>
+			<tr>
+				<td data-label="Cor do LED"><strong style="color: #3b82f6;">🔵 Azul</strong></td>
+				<td data-label="Significado">Funcionamento OK (conectado à Internet, com usuários)</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
 
 <h2>🏗️ Equipamentos do Rack Central Intragov</h2>
 
-<img src="img/rack_central.png" target="_blank" width="50%">
+<div class="image-container">
+	<img src="img/rack_central.png" alt="Rack Central Intragov" class="responsive-image">
+</div>
 
 <div class="alert alert-warning">
 	<strong>⚠️ Importante:</strong> Nenhum cabo deve ser alterado da porta atual sem orientação do NIT.
@@ -209,7 +236,9 @@
 
 <h3>🔥 1. Firewall</h3>
 
-<img src="img/fortinet.png" target="_blank" width="100%">
+<div class="image-container">
+	<img src="img/fortinet.png" alt="Firewall Fortinet" class="responsive-image">
+</div>
 
 <ul>
 	<li>É o equipamento de rede mais importante na escola</li>
@@ -222,7 +251,9 @@
 
 <h3>🔀 2. Switch</h3>
 
-<img src="img/switch.jpg" target="_blank" width="100%">
+<div class="image-container">
+	<img src="img/switch.jpg" alt="Switch de rede" class="responsive-image">
+</div>
 
 <ul>
 	<li>Distribui a internet cabeada para todos os ambientes da escola</li>
@@ -232,7 +263,9 @@
 
 <h3>⚡ 3. Estabilizador (ou Nobreak)</h3>
 
-<img src="img/estabilizador.png" target="_blank" width="100%">
+<div class="image-container">
+	<img src="img/estabilizador.png" alt="Estabilizador" class="responsive-image">
+</div>
 
 <ul>
 	<li>Em algumas escolas, foi substituído por nobreak</li>
@@ -249,7 +282,9 @@
 
 <h4>🔌 Instalação Improvisada de Hubs ou Switches</h4>
 
-<img src="img/instalacao_improvisada.png" target="_blank" width="50%">
+<div class="image-container">
+	<img src="img/instalacao_improvisada.png" alt="Instalação improvisada" class="responsive-image">
+</div>
 
 <ul>
 	<li>Podem travar e necessitar de reinicialização frequente</li>
@@ -259,7 +294,9 @@
 
 <h4>🔄 Equipamentos em Loop</h4>
 
-<img src="img/loop.png" target="_blank" width="50%">
+<div class="image-container">
+	<img src="img/loop.png" alt="Loop de rede" class="responsive-image">
+</div>
 
 <ul>
 	<li>Acontece quando um cabo conecta um equipamento a ele mesmo</li>
@@ -269,7 +306,9 @@
 
 <h4>📶 Uso de Roteador Não Homologado</h4>
 
-<img src="img/roteador_nao_homologado.png" target="_blank" width="50%">
+<div class="image-container">
+	<img src="img/roteador_nao_homologado.png" alt="Roteador não homologado" class="responsive-image">
+</div>
 
 <ul>
 	<li>Proibido em ambientes que já possuem sinal da rede SEDUC</li>
@@ -279,8 +318,8 @@
 
 <h2>📱 Chips</h2>
 
-<div style="background: #fef3c7; border: 2px solid #f59e0b; border-radius: 12px; padding: 25px; margin: 20px 0;">
-	<h3 style="color: #92400e; margin-bottom: 15px;">📋 ORIENTAÇÕES GERAIS</h3>
+<div class="info-box info-box-yellow">
+	<h3>📋 ORIENTAÇÕES GERAIS</h3>
 	<ul>
 		<li>Atualmente o estado possui contrato apenas com as operadoras <strong>VIVO e CLARO</strong></li>
 		<li>Não é mais possível vincular chips a alunos ou servidores</li>
@@ -298,3 +337,320 @@
 	<li>Enviar cópia do BO para deadanit@educacao.sp.gov.br</li>
 	<li>O NIT procederá com a solicitação de bloqueio das linhas junto à Seduc</li>
 </ol>
+
+<style>
+/* Correções para layout mobile responsivo */
+
+/* Container principal */
+.main-content {
+    max-width: 100%;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Caixas de informação responsivas */
+.info-box {
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.info-box-blue {
+    background: #f0f9ff;
+    border: 2px solid #0ea5e9;
+}
+
+.info-box-blue h3 {
+    color: #0c4a6e;
+    margin-bottom: 15px;
+}
+
+.info-box-green {
+    background: #f0fdf4;
+    border: 2px solid #22c55e;
+}
+
+.info-box-green h3 {
+    color: #166534;
+    margin-bottom: 15px;
+}
+
+.info-box-yellow {
+    background: #fef3c7;
+    border: 2px solid #f59e0b;
+}
+
+.info-box-yellow h3 {
+    color: #92400e;
+    margin-bottom: 15px;
+}
+
+/* Imagens responsivas */
+.image-container {
+    text-align: center;
+    margin: 20px 0;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    margin: 10px 0;
+}
+
+/* Links responsivos */
+.link-container {
+    margin: 15px 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+.responsive-link {
+    display: block;
+    background-color: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 15px;
+    text-decoration: none;
+    color: #1e40af;
+    transition: all 0.3s ease;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.responsive-link:hover {
+    background-color: #e2e8f0;
+    border-color: #3b82f6;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+}
+
+.link-icon {
+    font-size: 1.2rem;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.link-text {
+    font-weight: 600;
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 5px;
+    color: #1e40af;
+}
+
+.link-url {
+    font-size: 0.85rem;
+    color: #64748b;
+    font-family: 'Courier New', monospace;
+    display: block;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    line-height: 1.4;
+}
+
+/* Tabelas responsivas */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.table-stack {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    min-width: 600px;
+}
+
+.table-stack th,
+.table-stack td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.table-stack th {
+    background-color: #f8fafc;
+    font-weight: 600;
+    color: #374151;
+    border-bottom: 2px solid #d1d5db;
+}
+
+.table-stack tr:hover {
+    background-color: #f9fafb;
+}
+
+/* Quebra de palavras para todo o conteúdo */
+h1, h2, h3, h4, h5, h6, p, li, span, div {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
+}
+
+/* Listas responsivas */
+ul, ol {
+    padding-left: 20px;
+    margin: 15px 0;
+}
+
+li {
+    margin-bottom: 8px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+    .info-box {
+        padding: 15px;
+        margin: 15px 0;
+    }
+    
+    .table-responsive {
+        margin: 15px -15px;
+        border-radius: 0;
+    }
+    
+    .table-stack {
+        min-width: 500px;
+    }
+    
+    .table-stack th,
+    .table-stack td {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .responsive-link {
+        padding: 12px;
+    }
+    
+    .link-text {
+        font-size: 0.95rem;
+    }
+    
+    .link-url {
+        font-size: 0.8rem;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-box {
+        padding: 12px;
+        margin: 12px 0;
+    }
+    
+    .table-stack {
+        display: block;
+        min-width: auto;
+    }
+    
+    .table-stack thead {
+        display: none;
+    }
+    
+    .table-stack tbody {
+        display: block;
+    }
+    
+    .table-stack tr {
+        display: block;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        padding: 15px;
+        background-color: white;
+    }
+    
+    .table-stack td {
+        display: block;
+        border: none;
+        padding: 8px 0;
+        text-align: left;
+    }
+    
+    .table-stack td:before {
+        content: attr(data-label) ": ";
+        font-weight: 600;
+        color: #374151;
+        display: inline-block;
+        margin-bottom: 5px;
+    }
+    
+    .responsive-link {
+        padding: 10px;
+    }
+    
+    .link-text {
+        font-size: 0.9rem;
+    }
+    
+    .link-url {
+        font-size: 0.75rem;
+    }
+    
+    h1 {
+        font-size: 1.6rem;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    h3 {
+        font-size: 1.1rem;
+    }
+}
+
+/* Força quebra de palavras em elementos específicos */
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+/* Remove scroll horizontal */
+html, body {
+    overflow-x: hidden;
+}
+
+/* Garante que nenhum elemento ultrapasse a largura da tela */
+.main-content * {
+    max-width: 100% !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+}
+</style>
+
