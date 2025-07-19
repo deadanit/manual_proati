@@ -165,8 +165,6 @@ h3 {
 }
 
 .highlight-card {
-    background: linear-gradient(135deg, #ef4444, #dc2626);
-    color: white;
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 6px 20px rgba(239, 68, 68, 0.3);
@@ -181,7 +179,6 @@ h3 {
 .highlight-card h3 {
     font-size: 1.6rem;
     margin-bottom: 15px;
-    color: white;
 }
 
 .highlight-card p {
@@ -191,8 +188,7 @@ h3 {
 
 .highlight-card .btn {
     background-color: rgba(255,255,255,0.2);
-    color: white;
-    border: 2px solid white;
+    border: 2px solid;
     margin-top: 15px;
 }
 
