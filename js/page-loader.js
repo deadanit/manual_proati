@@ -168,6 +168,8 @@ class PageLoader {
 
             // Reinicializa scripts específicos da página
             this.initPageScripts();
+			
+			window.scrollTo(0, 0);
 
         } catch (error) {
             console.error('Erro ao carregar página:', error);
